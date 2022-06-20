@@ -1,7 +1,7 @@
 {
-  "name": "vanilla-typescript",
+  "name": "poc-editor-jsx",
   "version": "1.0.0",
-  "description": "JavaScript and TypeScript example starter project",
+  "description": "",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@editorjs/editorjs": "^2.24.3",
-    "editor-jsx": "^0.0.2",
     "parcel-bundler": "^1.6.1"
   },
   "devDependencies": {
@@ -18,8 +17,5 @@
   "resolutions": {
     "@babel/preset-env": "7.13.8"
   },
-  "keywords": [
-    "typescript",
-    "javascript"
-  ]
+  "keywords": []
 }
