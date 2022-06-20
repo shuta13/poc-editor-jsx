@@ -1,6 +1,5 @@
 import "./styles.css";
 
-/* @jsx h */
 import { h, createTool } from "editor-jsx";
 import type { EditorJSX } from "editor-jsx";
 import EditorJS from "@editorjs/editorjs";
@@ -98,6 +97,6 @@ new EditorJS({
   tools: {
     customTool,
     CustomInlineTool: { class: customInlineTool },
-    CustomBlockTune: { class: customBlockTune },
-  },
+    CustomBlockTune: { class: customBlockTune }
+  }
 });
