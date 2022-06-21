@@ -2,6 +2,7 @@
   "compilerOptions": {
     "strict": true,
     "module": "commonjs",
+    "target": "Esnext",
     "jsx": "react",
     "jsxFactory": "h",
     "esModuleInterop": true,

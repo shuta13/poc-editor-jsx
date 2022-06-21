@@ -25,7 +25,7 @@ const CustomTool: EditorJSX.Tool = () => {
       static_get_conversionConfig={undefined}
       static_get_enableLineBreaks={undefined}
       static_get_isReadOnlySupported={undefined}
-      static_get_toolbox={{ title: "CustomTool", icon: <span>🔮</span> }}
+      static_get_toolbox={{ title: "CustomTool", icon: "<span>🔮</span>" }}
     >
       <div>
         <button onClick={handleClick}>button</button> {/* inserted block */}
@@ -39,6 +39,9 @@ const CustomTool: EditorJSX.Tool = () => {
 };
 
 const CustomInlineTool: EditorJSX.InlineTool = () => {
+  const handleClick = () => {
+    console.log("InlineTool");
+  };
   return (
     <inlineTool
       surround={() => {}}
@@ -51,7 +54,7 @@ const CustomInlineTool: EditorJSX.InlineTool = () => {
       static_get_title={undefined}
     >
       <div>
-        <span>InlineTool</span>
+        <span onClick={handleClick}>🤔</span>
       </div>
     </inlineTool>
   );
@@ -84,16 +87,16 @@ const CustomBlockTune: EditorJSX.BlockTune = () => {
   );
 };
 
-const customTool = createTool(<CustomTool />, null);
-const customInlineTool = createTool(<CustomInlineTool />, null);
-const customBlockTune = createTool(<CustomBlockTune />, null);
+const customTool = createTool(<CustomTool />);
+const customInlineTool = createTool(<CustomInlineTool />);
+const customBlockTune = createTool(<CustomBlockTune />);
 
 const e = document.createElement("div");
 e.id = "editorjs";
 document.body.appendChild(e);
 
 new EditorJS({
-  holderId: "editorjs",
+  holder: "editorjs",
   tools: {
     customTool,
     CustomInlineTool: { class: customInlineTool },
